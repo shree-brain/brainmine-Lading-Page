@@ -233,11 +233,11 @@
       <span class="text-4xl text-white font-bold  sm:text-1xl my-3">Get your website to the first page on Google search results with our proven SEO strategies.</span>
       <!--// Add Row  -->
       <div class="flex flex-col items-center justify-between xl:flex-row">
-        <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12"> 
-          <img src="./img-1.png" alt="">
+        <div class="w-full mb-12 xl:mb-0 xl:pr-16 xl:w-7/12"> 
+          <img src="/img/img-1.png" alt="">
           
         </div>
-        <div class="w-full max-w-xl mb-12 xl:mb-0 xl:pr-16 xl:w-7/12"> 
+        <div class="w-full mb-12 xl:mb-0 xl:pr-16 xl:w-7/12"> 
         <h2 class="text-4xl text-brand-color font-bold text-left sm:text-1xl my-3">Challenges Faced by the Manufacturing Industry:</h2>
         <ul class="space-y-4 text-left font-semibold text-xl mt-3">
           <li class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -356,9 +356,57 @@
   <section class="bg-black text-white">
     <div class="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32">
     <h2 class="text-4xl text-brand-color font-bold  sm:text-1xl">Services We Provide</h2>
+    <div class="flex items-center justify-center">
+      <div x-data="{ openTab: 1 }" class="py-8">
+        <div class="max-w-[60rem] mx-auto flex">
+            <div class="space-x-4 p-2 bg-green-700 rounded-3xl shadow-md -mr-16">
+                <div class="flex flex-col w-80 space-y-4 basis-1/4">
+                    <button x-on:click="openTab = 1" :class="{ 'bg-blue-600 text-white': openTab === 1 }" class="flex-1 z-10 py-4 group/tab1 px-4 rounded-full text-left focus:outline-none focus:shadow-outline-blue transition-all duration-300 hover:bg-blue-600 hover:text-white">
+                        <div class="flex flex-row items-center">
+                            <span class="flex-1 text-xl font-semibold">Search engine optimization</span>
+                        <svg :class="{ 'opacity-100': openTab === 1 }" class="w-[50px] h-[50px] fill-[#fff] opacity-0 group-hover/tab1:opacity-100" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"></path>
+                        </svg>
+                        </div>
+                    </button>
+                    <button x-on:click="openTab = 2" :class="{ 'bg-blue-600 text-white': openTab === 2 }" class="flex-1 z-10 py-4 group/tab2 px-4 rounded-full text-left focus:outline-none focus:shadow-outline-blue transition-all duration-300 hover:bg-blue-600 hover:text-white">
+                        <div class="flex flex-row items-center">
+                            <span class="flex-1 text-xl font-semibold">Paid search marketing</span>
+                        <svg :class="{ 'opacity-100': openTab === 2 }" class="w-[50px] h-[50px] fill-[#fff] opacity-0 group-hover/tab2:opacity-100" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"></path>
+                        </svg>
+                        </div>
+                    </button>
+                    <button x-on:click="openTab = 3" :class="{ 'bg-blue-600 text-white': openTab === 3 }" class="flex-1 z-10 py-4 px-4 group/tab3 rounded-full text-left focus:outline-none focus:shadow-outline-blue transition-all duration-300 hover:bg-blue-600 hover:text-white">
+                        <div class="flex flex-row items-center">
+                            <span class="flex-1 text-xl font-semibold">Conversion rate optimization</span>
+                        <svg :class="{ 'opacity-100': openTab === 3 }" class="w-[50px] h-[50px] fill-[#fff] opacity-0 group-hover/tab3:opacity-100" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM241 377c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l87-87-87-87c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L345 239c9.4 9.4 9.4 24.6 0 33.9L241 377z"></path>
+                        </svg>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <div x-show="openTab === 1" class="transition-all flex-1 duration-300 p-4 rounded-3xl shadow-md border-1 bg-gray-100 pl-16">
+                <h2 class="text-2xl font-semibold mb-2 text-blue-600">Section 1 Content</h2>
+                <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquam justo nec justo lacinia, vel ullamcorper nibh tincidunt.</p>
+            </div>
+
+            <div x-show="openTab === 2" class="transition-all duration-300 bg-white p-4 rounded-2xl shadow-md border-1 bg-gray-100 pl-16">
+                <h2 class="text-2xl font-semibold mb-2 text-blue-600">Section 2 Content</h2>
+                <p class="text-gray-700">Proin non velit ac purus malesuada venenatis sit amet eget lacus. Morbi quis purus id ipsum ultrices aliquet Morbi quis.</p>
+            </div>
+
+            <div x-show="openTab === 3" class="transition-all duration-300 bg-white p-4 rounded-2xl shadow-md border-1 bg-gray-100 pl-16">
+                <h2 class="text-2xl font-semibold mb-2 text-blue-600">Section 3 Content</h2>
+                <p class="text-gray-700">Fusce hendrerit urna vel tortor luctus, nec tristique odio tincidunt. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+            </div>
+        </div>
+      </div>
+    </div>
   </div>
     <!--// Tab Design  -->
-
   </section>
   <section class="relative bg-black text-white">
     <img src="https://images.pexels.com/photos/3747463/pexels-photo-3747463.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" class="absolute inset-0 object-cover w-full h-full" alt="" />
@@ -567,10 +615,166 @@
       </div>
     </div>
   </section>
-  <section class="bg-slate-950 text-white">
+  <section class="bg-gray-900 text-white">
     <div class="container mx-auto flex flex-col items-left px-4 py-16 text-center md:py-32 md:px-10 lg:px-32">
       <h2 class="text-4xl text-brand-color font-bold  sm:text-1xl my-3">Frequently Asked Questions</h2>
       <span class="text-4xl text-white font-bold  sm:text-1xl my-3">With Our Expert SEO Techniques, we helped Manufacturing Businesses Rise to the Top and Dominate Search Engine Results Like Never Before!</span>
+
+<div class="grid divide-y divide-gray-400 max-w-full mt-8 text-left">
+  <div >
+    <details class="group">
+      <summary class="flex justify-between items-center py-4 px-5 font-medium cursor-pointer list-none group-open:text-brand-color">
+        <span>1. How can digital marketing improve our manufacturing company's online visibility?</span>
+        <span class="transition group-open:rotate-180">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </span>
+      </summary>
+      <p class="text-gray-400 px-4 group-open:animate-fadeIn">
+        Digital marketing offers a range of strategies to enhance your manufacturing company's online visibility. Search engine optimization (SEO) optimizes your website for relevant keywords, 
+        making it easier for potential customers to find you through search engines. Content marketing involves creating valuable and relevant content that attracts and engages your target audience, 
+        driving more traffic to your website. Social media marketing allows you to connect with your audience on platforms where they spend their time, increasing brand awareness and visibility. 
+        Online advertising, such as pay-per-click (PPC) campaigns, helps you reach specific audiences and drive traffic to your website.
+      </p>
+    </details>
+  </div>
+  <div >
+    <details class="group">
+      <summary class="flex justify-between items-center py-4 px-5 font-medium cursor-pointer list-none group-open:text-brand-color">
+        <span> 2. Can digital marketing help us generate more leads and increase sales?</span>
+        <span class="transition group-open:rotate-180">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </span>
+      </summary>
+      <p class="text-gray-400 px-4 group-open:animate-fadeIn">
+        Yes, digital marketing is a powerful tool for lead generation and sales growth. By implementing strategies such as email marketing, PPC advertising, and social media advertising, you can attract 
+        potential customers to your website and convert them into leads. With the right digital marketing tactics, you can nurture these leads through the sales funnel, ultimately increasing your conversion 
+        rates and driving sales growth.
+      </p>
+    </details>
+  </div>
+  <div >
+    <details class="group">
+      <summary class="flex justify-between items-center py-4 px-5 font-medium cursor-pointer list-none group-open:text-brand-color">
+        <span> Can I get a refund for my subscription?</span>
+        <span class="transition group-open:rotate-180">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </span>
+      </summary>
+      <p class="text-gray-400 px-4 group-open:animate-fadeIn">
+        We offers a 30-day money-back guarantee for most of its subscription plans. If you are not
+        satisfied with your subscription within the first 30 days, you can request a full refund. Refunds
+        for subscriptions that have been active for longer than 30 days may be considered on a case-by-case
+        basis.
+      </p>
+    </details>
+  </div>
+  <div >
+    <details class="group">
+      <summary class="flex justify-between items-center py-4 px-5 font-medium cursor-pointer list-none group-open:text-brand-color">
+        <span> How do I cancel my subscription?</span>
+        <span class="transition group-open:rotate-180">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </span>
+      </summary>
+      <p class="text-gray-400 px-4 group-open:animate-fadeIn">
+        To cancel your We subscription, you can log in to your account and navigate to the
+        subscription management page. From there, you should be able to cancel your subscription and stop
+        future billing.
+      </p>
+    </details>
+  </div>
+  <div >
+    <details class="group">
+      <summary class="flex justify-between items-center py-4 px-5 font-medium cursor-pointer list-none group-open:text-brand-color">
+        <span> Can I try this platform for free?</span>
+        <span class="transition group-open:rotate-180">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </span>
+      </summary>
+      <p class="text-gray-400 px-4 group-open:animate-fadeIn">
+        We offers a free trial of its  platform for a limited time. During the trial period,
+        you will have access to a limited set of features and functionality, but you will not be charged.
+      </p>
+    </details>
+  </div>
+  <div >
+    <details class="group">
+      <summary class="flex justify-between items-center py-4 px-5 font-medium cursor-pointer list-none group-open:text-brand-color">
+        <span> How do I access   documentation?</span>
+        <span class="transition group-open:rotate-180">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </span>
+      </summary>
+      <p class="text-gray-400 px-4 group-open:animate-fadeIn">
+          Documentation is available on the company's website and can be accessed by
+        logging in to your account. The documentation provides detailed information on how to use the ,
+        as well as code examples and other resources.
+      </p>
+    </details>
+  </div>
+  <div >
+    <details class="group">
+      <summary class="flex justify-between items-center py-4 px-5 font-medium cursor-pointer list-none group-open:text-brand-color">
+        <span> How do I contact support?</span>
+        <span class="transition group-open:rotate-180">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </span>
+      </summary>
+      <p class="text-gray-400 px-4 group-open:animate-fadeIn">
+        If you need help with the platform or have any other questions, you can contact the
+        company's support team by submitting a support request through the website or by emailing
+        support@We.com.
+      </p>
+    </details>
+  </div>
+  <div >
+    <details class="group">
+      <summary class="flex justify-between items-center py-4 px-5 font-medium cursor-pointer list-none group-open:text-brand-color">
+        <span> Do you offer any discounts or promotions?</span>
+        <span class="transition group-open:rotate-180">
+            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+        </span>
+      </summary>
+      <p class="text-gray-400 px-4 group-open:animate-fadeIn">
+        We may offer discounts or promotions from time to time. To stay up-to-date on the latest
+        deals and special offers, you can sign up for the company's newsletter or follow it on social media.
+      </p>
+    </details>
+  </div>
+  <div >
+    <details class="group">
+      <summary class="flex justify-between items-center py-4 px-5 font-medium cursor-pointer list-none group-open:text-brand-color">
+        <span> How do we compare to other similar services?</span>
+        <span class="transition group-open:rotate-180">
+          <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </span>
+      </summary>
+      <p class="text-gray-400 px-4 group-open:animate-fadeIn">
+         This platform is a highly reliable and feature-rich service that offers a wide range
+        of tools and functionality. It is competitively priced and offers a variety of billing options to
+        suit different needs and budgets.
+      </p>
+    </details>
+  </div>
+</div>
     </div>
   </section>
   <!--// Icon Card  -->
@@ -1088,16 +1292,16 @@
 </section>  -->
 <!--// FAQ Section  -->
 <!-- component -->
-<div class="max-w-screen-xl mx-auto px-5 bg-white min-h-sceen">
+<!-- <div class="max-w-screen-xl mx-auto px-5 bg-white min-h-sceen">
 	<div class="flex flex-col items-center">
-    <h2 class="text-4xl text-black font-bold  sm:text-1xl my-3">Frequently Asked Questions</h2>
+    <h2 class="text-4xl text-black font-bold  sm:text-1xl my-3">Frequently Asked Questions</h2> -->
 		<!-- <h2 class=" title-font  mb-4 text-4xl font-extrabold leading-10 tracking-tight sm:text-5xl sm: md:text-6xl">FAQ</h2> -->
 		<!-- <p class="text-neutral-500 text-xl mt-3">
 			Frequenty asked questions
 		</p> -->
-	</div>
-	<div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
-		<div class="py-5">
+	<!-- </div> -->
+	<!-- <div class="grid divide-y divide-neutral-200 max-w-xl mx-auto mt-8">
+		<div >
 			<details class="group">
 				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span>1. How can digital marketing improve our manufacturing company's online visibility?</span>
@@ -1115,7 +1319,7 @@
 				</p>
 			</details>
 		</div>
-		<div class="py-5">
+		<div >
 			<details class="group">
 				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span> 2. Can digital marketing help us generate more leads and increase sales?</span>
@@ -1131,7 +1335,7 @@
 				</p>
 			</details>
 		</div>
-		<div class="py-5">
+		<div >
 			<details class="group">
 				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span> Can I get a refund for my subscription?</span>
@@ -1148,7 +1352,7 @@
 				</p>
 			</details>
 		</div>
-		<div class="py-5">
+		<div >
 			<details class="group">
 				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span> How do I cancel my subscription?</span>
@@ -1164,7 +1368,7 @@
 				</p>
 			</details>
 		</div>
-		<div class="py-5">
+		<div >
 			<details class="group">
 				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span> Can I try this platform for free?</span>
@@ -1179,7 +1383,7 @@
 				</p>
 			</details>
 		</div>
-		<div class="py-5">
+		<div >
 			<details class="group">
 				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span> How do I access   documentation?</span>
@@ -1195,7 +1399,7 @@
 				</p>
 			</details>
 		</div>
-		<div class="py-5">
+		<div >
 			<details class="group">
 				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span> How do I contact support?</span>
@@ -1211,7 +1415,7 @@
 				</p>
 			</details>
 		</div>
-		<div class="py-5">
+		<div >
 			<details class="group">
 				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span> Do you offer any discounts or promotions?</span>
@@ -1226,7 +1430,7 @@
 				</p>
 			</details>
 		</div>
-		<div class="py-5">
+		<div >
 			<details class="group">
 				<summary class="flex justify-between items-center font-medium cursor-pointer list-none">
 					<span> How do we compare to other similar services?</span>
@@ -1242,7 +1446,7 @@
 				</p>
 			</details>
 		</div>
-	</div>
+	</div> -->
 </div>
 
 <script>
